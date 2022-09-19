@@ -1,0 +1,115 @@
+site_name: Zukma Documentation
+copyright: Copyright &copy; 2022 Zukma
+repo_url: https://github.com/zukmachain/zukma-documentation
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+
+theme:
+  font:
+    text: Nunito
+    code: Roboto Mono
+
+  features:
+    - content.code.annotate
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate
+
+  name: material
+  custom_dir: overrides
+  logo: assets/zukma-gradient.png
+  favicon: assets/favicon.png
+  language: en
+
+plugins:
+  - search
+  - mkdocs-video
+
+extra:
+  # Default mkdocs-material alternate links for untranslated pages
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
+  alternate:
+    - name: English
+      link: ''
+      lang: en
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/zukmachain
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/zukmachain
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home:
+      - 'index.md'
+      - 'Quick Start': 'home/quick-start.md'
+      - 'FAQs': 'home/FAQs.md'
+  - 'Credits': 'credits.md'
+  - 'Get Started':
+      - 'get-started/index.md'
+      - 'Faucet': 'get-started/faucet.md'
+      - 'Claims': 'get-started/claims.md'
+      - 'EVM <-> Substrate Transfers': 'get-started/internal-transfer.md'
+      - 'Endpoints': 'get-started/endpoints.md'
+      - 'Transfer Balances': 'get-started/transfer-balances.md'
+  - 'What to Try?':
+      - 'Create an Account': 'what-to-try/account-generation.md'
+      - 'Become a Nominator': 'what-to-try/nominator.md'
+      - 'Set an Identity': 'what-to-try/identity.md'
+      - 'Explore the Governance': 'what-to-try/democracy.md'
+      - 'Use the Treasury': 'what-to-try/treasury.md'
+  - 'Validator Guides':
+      - 'Become a Validator': 'validator-guides/validator.md'
+      - 'Validator Monitoring': 'validator-guides/node-monitoring.md'
+      - 'Create an Account': 'validator-guides/account-generation.md'
+      - 'Validator Payout Overview': 'validator-guides/validator-payout-overview.md'
+      - 'Secure your Validator': 'validator-guides/secure-validator.md'
+      - 'Change VPS Provider': 'validator-guides/change-vps-provider.md'
+      - 'Update Binaries': 'validator-guides/update-binaries.md'
+      - 'Stop Validating': 'validator-guides/stop-validating.md'
+  - 'Troubleshooting':
+      - 'Resolve Errors': 'troubleshooting/01-substrate-error-codes.md'
+      - 'Glossary': 'troubleshooting/02-Glossary.md'
+  - 'Developer Guides':
+      - 'dev-guides/index.md'
+      - 'Tutorials':
+          - 'dev-guides/Tutorials/index.md'
+          - 'EVM Tutorial':
+              - 'dev-guides/Tutorials/evm-tutorial/index.md'
+              - 'Tools and Resources':
+                  - 'Libraries': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/eth-libs.md'
+                  - 'Tools': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/waffle.md'
+                  - 'EVM Balances': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/evm-balances.md'
+              - 'Guides':
+                  - 'Connect to Zukma': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-mm.md'
+                  - 'Deploy with Truffle': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-truffle.md'
+  - 'Deep Dives':
+      - 'EVM Pallet': 'deep-dives/evm-pallet.md'
+      - 'Keys': 'deep-dives/substrate_keys.md'
+      - 'Using Web3.js': 'deep-dives/Using-Web3js.md'
+      - 'Staking': 'deep-dives/staking.md'
+      - 'Bridges': 'deep-dives/bridges.md'
